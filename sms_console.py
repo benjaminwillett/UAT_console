@@ -78,13 +78,9 @@ for i in range(0,sheet.max_row):
         pass
     rowCount += 1
 
-username = "benwillett"
-token = "WD2ND1LXRHziVNew87dsoSrVsXnrSy"
+username = "XXXXX"
+token = "XXXXX"
 client = TextmagicRestClient(username, token)
-
-# ACCOUNT_SID = "ACee88997b173e176435f49f1667200b0b"
-# AUTH_TOKEN = "2f3b730562cffae50135f6a8caa6a815"
-# client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
 
 @app.route('/uat' , methods=['GET','POST'])
