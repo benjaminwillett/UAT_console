@@ -1,0 +1,326 @@
+
+[id="header"] {
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+[id="header"] h1 {
+    text-align: center;
+    background-color: deepskyblue;
+    -moz-border-radius-topright: 20em;
+    border-style: solid;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+[id="header"] h3 {
+    font-weight: bold;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-style: solid;
+    background-color: deepskyblue;
+}
+
+[id="nav"] {
+    background-color: black;
+}
+
+[id="UL-TITLE"] {
+    background-color: black;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    height: 10%;
+    list-style-type: none;
+}
+
+[id="section1"] ul {
+    list-style-type: square;
+    background-color: black;
+}
+
+[id="section1"] li{
+    background-color: whitesmoke;
+    border-bottom: 1px solid #f9f9f9;
+    border-top: 1px solid #f9f9f9;
+    border-bottom-color: inherit;
+    border-top-color: inherit;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    text-align: left;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 10%;
+}
+
+[id="section1"] li:hover {
+    background-color: lightgrey;
+    border-bottom: 1px solid #f9f9f9;
+    border-top: 1px solid #f9f9f9;
+    border-bottom-color: inherit;
+    border-top-color: inherit;
+    color: deepskyblue;
+    font-size: medium;
+    font-weight: bold;
+    text-align: left;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 10%;
+}
+
+
+[id="ROLE"] {
+    width: 15%;
+    display: inline-block;
+    color: black;
+    font-size: small;
+    margin: auto;
+    border: none;
+}
+
+[id="ROLE-TITLE"] {
+    width: 15%;
+    display: inline-block;
+    color: white;
+    font-size: large;
+    margin: auto;
+    background-color: black;
+    text-align: center;
+    border: solid;
+}
+
+[id="NAME"] {
+    width: 12.5%;
+    float: left;
+    color: black;
+    font-size: small;
+    margin: auto;
+}
+
+[id="NAME-TITLE"] {
+    width: 12.5%;
+    float: left;
+    color: white;
+    font-size: large;
+    margin: auto;
+    background-color: black;
+    text-align: center;
+    border: solid;
+}
+
+[id="EMAIL"] {
+    width: 25%;
+    display: inline-block;
+    color: black;
+    font-size: small;
+    margin: auto;
+}
+
+[id="EMAIL-TITLE"] {
+    width: 25%;
+    display: inline-block;
+    color: white;
+    font-size: large;
+    margin: auto;
+    background-color: black;
+    text-align: center;
+    border: none;
+}
+
+[id="SMS"] {
+    width: 15%;
+    display: inline-block;
+    color: black;
+    font-size: small;
+    margin: auto;
+}
+
+
+[id="SMS-TITLE"] {
+    width: 15%;
+    display: inline-block;
+    color: white;
+    font-size: large;
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    border:none;
+}
+
+[id="STATUS"] {
+    width: 10%;
+    display: inline-block;
+    text-align: left;
+    color: red;
+    background-color: yellow;
+    font-size: small;
+    margin: auto;
+}
+
+[id="STATUS-TITLE"] {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: large;
+    margin: auto;
+    border: none;
+}
+
+[id="STATUSCHECKED"] {
+    width: 10%;
+    display: inline-block;
+    text-align: left;
+    color: black;
+    background-color: lawngreen;
+    font-size: small;
+    margin: auto;
+}
+
+[id="STATUS-MESSAGE"] {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    color: red;
+    background-color: yellow;
+    font-size: small;
+    margin: auto;
+}
+
+
+[id="STATUS-MESSAGE-TITLE"] {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: large;
+    margin: auto;
+    border: none;
+}
+
+[id="MESSAGE-SENT"] {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    color: black;
+    background-color: lawngreen;
+    font-size: small;
+    margin: auto;
+}
+
+[id="MESSAGE-FAILED"] {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    color: black;
+    background-color: red;
+    font-size: small;
+    margin: auto;
+}
+
+[id="STATUS-EMAIL"] {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    color: red;
+    background-color: yellow;
+    font-size: small;
+    margin: auto;
+}
+
+[id="STATUS-EMAIL-TITLE"] {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: large;
+    margin: auto;
+    border: none;
+}
+
+[id="EMAIL-SENT"] {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    color: black;
+    background-color: lawngreen;
+    font-size: small;
+    margin: auto;
+}
+
+[id="section1"] {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height:30px;
+    width: 90%;
+    height:auto;
+    padding:10px;
+    background-color: black;
+    border-style: solid;
+    color: deepskyblue;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+}
+
+
+[id="section1"] h1 {
+    text-align: center;
+    color: deepskyblue;
+}
+
+[id="section1"] h2 {
+    text-align: center;
+    color: deepskyblue;
+}
+
+[id="section2"] {
+    margin: auto;
+    line-height:30px;
+    width: 90%;
+    height:50%;
+    padding:10px;
+    background-color: forestgreen;
+    border-style: solid;
+    color: lawngreen;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+}
+
+[id="section2"] h1 {
+    text-align: center;
+    color: lawngreen;
+}
+
+[id="MESSAGEBOX"] {
+    font-size: large;
+    color: deepskyblue;
+    font-weight: bold;
+}
+
+[id="BUTTON"] {
+    font-size: large;
+    color: black;
+    font-weight: bold;
+}
+
+[id="section2"] h2 {
+    text-align: center;
+    color: deepskyblue;
+}
+
+.mytext {
+    width: 80%;
+    height: 25%;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: black;
+}
+}

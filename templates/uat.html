@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="/static/css/test.css">
+    <meta charset="UTF-8">
+    <title>UAT Testing tool</title>
+</head>
+<body>
+
+<div id="header">
+<h1>UAT Testing tool</h1>
+    <p><h3>Background</h3>
+    <p><h4>This tool has been created to improve communications with testers in DET IE during significant changes.
+    It is a bulk messaging tool that allows the user to communicate with Testers via SMS, EMAIL, or both.
+    This software is the property of Techcamp, if support is required please <a href="mailto:benw@techcamp.com.au">Email Me</a></h4>
+    <p><h3>Instructions</h3>
+    <p><h4>Your contacts file needs to be saved exactly as the contacts file template instructs.
+    The directory plath you intend to use to this file needs to be specified here:</h4></p>
+</div>
+
+<div id="nav">
+</div>
+
+<div id="section1">
+<form action="/message" method="post">
+    <ul id="UL-TITLE">
+        <li id="UL-TITLE">
+            <div id="ROLE-TITLE">ROLE</div>
+            <div id="NAME-TITLE">NAME</div>
+            <div id="STATUS-TITLE">STATUS</div>
+            <div id="SMS-TITLE">SMS</div>
+            <div id="STATUS-MESSAGE-TITLE">STATUS</div>
+            <div id="EMAIL-TITLE">EMAIL</div>
+            <div id="STATUS-EMAIL-TITLE">STATUS</div>
+        </li>
+    </ul>
+        {% for row_index in range(Y['testers']|count) %}
+    <ul >
+
+      <li>
+          <div id="ROLE">  - {{ Y['app'][row_index] }} </div>
+
+          <div id="NAME">  - {{ Y['testers'][row_index] }} </div>
+
+          <div {% if Y['app'][row_index] not in (Y['status']) %} id="STATUS"> {% else %} id="STATUSCHECKED">
+                {% endif %}
+               <input type="checkbox" name="STATUS" value="{{Y['app'][row_index]}}" />
+                {% if Y['app'][row_index] not in (Y['status']) %} Pending
+                {% else %} Complete <i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i>
+                {% endif %}</div>
+
+          <div id="SMS"> <input type="checkbox" name="SMS" value="{{Y['mobile'][row_index]}}" /> SMS <i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
+              {{ Y['mobile'][row_index] }}</div>
+
+          <div  {% if Y['mobile'][row_index] in (Y['messageFailed']) %} id="MESSAGE-FAILED">
+                {% elif Y['mobile'][row_index] not in (Y['messageSent']) %} id="STATUS-MESSAGE">
+                {% else %} id="MESSAGE-SENT">
+                {% endif %}
+                {% if Y['mobile'][row_index] in (Y['messageFailed']) %} Failed <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+                {% elif Y['mobile'][row_index] not in (Y['messageSent']) %} Not Sent
+                {% else %} Sent <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+                {% endif %}</div>
+
+          <div id="EMAIL"> <input type="checkbox" name="EMAIL" value="{{Y['email'][row_index]}}" /> EMAIL <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+              {{ Y['email'][row_index] }}</div>
+
+          <div {% if Y['email'][row_index] not in (Y['emailSent']) %} id="STATUS-EMAIL"> {% else %} id="EMAIL-SENT">
+                {% endif %}
+                <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                {% if Y['email'][row_index] not in (Y['emailSent']) %} Not Sent
+                {% else %} Sent <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+          {% endif %}</div>
+
+      </li>
+    </ul>
+    {% endfor %}
+
+<h2>Send Message</h2>
+<div id="MESSAGEBOX">Message: <input type="text" name="message" class="mytext">
+  <input id="BUTTON" type="submit" value=" Send ">
+</div>
+</form>
+</div>
+</body>
